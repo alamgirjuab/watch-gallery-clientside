@@ -1,0 +1,16 @@
+.banner{
+    background-color: #2b2b2b;
+}
+.custom-color{
+    color: #994fff;
+}
+.custom-font{
+    font-size: 50px;
+    font-weight: 700;
+}
+.banner-left {
+    padding-top: 10%;
+}
+.banner-left h4,p,button{
+    margin-top: 20px;
+}

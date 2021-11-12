@@ -4,6 +4,8 @@ import Home from './components/Home/Home/Home';
 import Users from './components/Users/Users';
 import About from './components/About/About';
 import NotFound from './components/NotFound/NotFound';
+import Login from './components/Login/Login/Login';
+import Register from './components/Login/Register/Register';
 
 function App() {
   return (
@@ -18,6 +20,12 @@ function App() {
           </Route>
           <Route path="/users">
             <Users />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/register">
+            <Register />
           </Route>
           <Route exact path="/">
             <Home />

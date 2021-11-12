@@ -9,6 +9,8 @@ import Register from './components/Login/Register/Register';
 import AuthProvider from './contexts/AuthProvider/AuthProvider';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
+import Products from './components/Products/Products';
+import AddProduct from './components/AddProduct/AddProduct';
 
 function App() {
   return (
@@ -22,6 +24,12 @@ function App() {
             <PrivateRoute path="/about">
               <About />
             </PrivateRoute>
+            <Route path="/products">
+              <Products />
+            </Route>
+            <Route path="/addProducts">
+              <AddProduct />
+            </Route>
             <PrivateRoute path="/dashboard">
               <Dashboard />
             </PrivateRoute>

@@ -18,6 +18,7 @@ const Header = () => {
                     <Navbar.Collapse className="justify-content-end">
                         <NavLink className='link' to="/home">Home</NavLink>
                         <NavLink className='link' to="/about">About Us</NavLink>
+                        <NavLink className='link' to="/products">Products</NavLink>
                         <NavLink className='link' to="/offers">Offers</NavLink>
                         <NavLink className='link' to="/contact">Contact Us</NavLink>
                         {/* <NavLink className='link' to="/login">
@@ -41,6 +42,7 @@ const Header = () => {
                         }*/}
                         {user?.email ?
                             <div>
+                                <NavLink className='link' to="/addProducts">Add Products</NavLink>
                                 <NavLink className='link' to="/dashboard">Dashboard</NavLink>
                                 <Button className="me-3" onClick={logout} variant="light">Logout</Button>
                             </div>

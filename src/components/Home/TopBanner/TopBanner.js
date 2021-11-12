@@ -1,6 +1,7 @@
 import React from 'react';
 import './TopBanner.css';
 import bannerImg from '../../../img/banner.png';
+import { NavLink } from 'react-router-dom';
 
 const TopBanner = () => {
     return (
@@ -13,7 +14,8 @@ const TopBanner = () => {
                             <h1 className='custom-font'>Smart <span className='custom-color'>Watch</span></h1>
                             <h4 className=''>TECHNOLOGY OF THE FUTURE</h4>
                             <p>Define your style as classy and refined as you pick up distinctive types of watches for different events</p>
-                            <button className='btn btn-danger'>Explore More</button>
+                            <NavLink to="/products" className="btn btn-danger">Explore</NavLink>
+                            {/* <button className='btn btn-danger'>Explore More</button> */}
                         </div>
                         <div className='col-lg-6 col-md-6 col-sm-12 ps-5 my-5'>
                             <img className='img-fluid w-100' src={bannerImg} alt="" />

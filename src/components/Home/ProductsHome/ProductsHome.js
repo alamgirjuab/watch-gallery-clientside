@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './ProductsHome.css';
 
-const products = [
+/* const products = [
     {
         "id": 1,
         "name": "Analog Watch",
@@ -72,12 +72,20 @@ const products = [
         "img": "https://i.ibb.co/WBNzdq6/wall-hanging-watch.jpg",
         "price": 150
     }
-]
+] */
 const ProductsHome = () => {
+    const [products, setProducts] = useState([])
+    useEffect(() => {
+        fetch('http://localhost:5000/products')
+            .then(res => res.json())
+            .then(data => setProducts(data));
+    }, [])
     return (
         <div className='container my-5 product-display'>
             {
-                products.map(product => <div className='single-product'>
+                products.map(product => <div
+                    key={product._id}
+                    className='single-product'>
 
                     <img className='img-fluid' src={product.img} alt="" />
                     <h2>{product.name}</h2>

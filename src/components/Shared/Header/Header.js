@@ -3,8 +3,10 @@ import { Button, Container, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
 import logo from '../../../img/LOGO.png';
+import useAuth from '../../../hooks/useAuth';
 
 const Header = () => {
+    const { user, logout } = useAuth();
     return (
         <div>
             <Navbar className="py-4" bg="info" variant="dark" sticky="top" collapseOnSelect expand="lg">
@@ -18,9 +20,9 @@ const Header = () => {
                         <NavLink className='link' to="/about">About Us</NavLink>
                         <NavLink className='link' to="/offers">Offers</NavLink>
                         <NavLink className='link' to="/contact">Contact Us</NavLink>
-                        <NavLink className='link' to="/login">
+                        {/* <NavLink className='link' to="/login">
                             <NavLink className='link' to="/login">Login</NavLink>
-                        </NavLink>
+                        </NavLink> */}
 
                         {/*-------------------------- 
                           | Conditional menu option |
@@ -36,11 +38,11 @@ const Header = () => {
                         {user?.email ?
                             <NavLink className='link' to="/manageOrders">Manage all orders</NavLink> :
                             <NavLink className='link' to="/"></NavLink>
-                        }
+                        }*/}
                         {user?.email ?
-                            <Button className="me-3" onClick={logOut} variant="light">Logout</Button> :
+                            <Button className="me-3" onClick={logout} variant="light">Logout</Button> :
                             <NavLink className='link' to="/login">Login</NavLink>
-                        } */}
+                        }
 
                         <Navbar.Text>
                             {/* <a href="#login">{user?.displayName}</a> */}

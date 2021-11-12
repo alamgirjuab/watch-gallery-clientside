@@ -1,0 +1,7 @@
+.main-body{
+    height: 100vh;
+}
+.side-nav{
+    background-color: #efefef;
+    border-right: 2px solid lightgreen;
+}

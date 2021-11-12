@@ -30,8 +30,8 @@ const Login = () => {
                     <div className='shadow p-3 mb-5 bg-body rounded py-5'>
                         <h2 className='my-5'>Please Login</h2>
                         <form onSubmit={handleLoginSubmit}>
-                            <input className='w-50' type="email" name="email" onChange={handleOnChange} id="" placeholder="Your Email" /><br />
-                            <input className='my-3 w-50' type="password" name="password" onChange={handleOnChange} id="" placeholder="Password" /><br />
+                            <input className='w-50' type="email" name="email" onBlur={handleOnChange} id="" placeholder="Your Email" /><br />
+                            <input className='my-3 w-50' type="password" name="password" onBlur={handleOnChange} id="" placeholder="Password" /><br />
                             <button type="submit" className='btn-warning w-50 px-5 py-2'>Login</button><br />
                             <NavLink to="/register">
                                 <button type="button" style={{ textDecoration: "none" }} class="btn btn-link">New User? Please Register</button>

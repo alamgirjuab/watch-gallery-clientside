@@ -40,7 +40,11 @@ const Header = () => {
                             <NavLink className='link' to="/"></NavLink>
                         }*/}
                         {user?.email ?
-                            <Button className="me-3" onClick={logout} variant="light">Logout</Button> :
+                            <div>
+                                <NavLink className='link' to="/dashboard">Dashboard</NavLink>
+                                <Button className="me-3" onClick={logout} variant="light">Logout</Button>
+                            </div>
+                            :
                             <NavLink className='link' to="/login">Login</NavLink>
                         }
 

@@ -3,13 +3,13 @@ import React, { useEffect, useState } from 'react';
 const ManageProducts = () => {
     const [products, setProducts] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://enigmatic-ocean-25875.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
 
     const handleDelete = id => {
-        const url = `http://localhost:5000/products/${id}`;
+        const url = `https://enigmatic-ocean-25875.herokuapp.com/products/${id}`;
         fetch(url, {
             method: 'DELETE'
         })

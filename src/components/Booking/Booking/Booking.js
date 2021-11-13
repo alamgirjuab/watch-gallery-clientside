@@ -5,7 +5,7 @@ const Booking = () => {
     const { productId } = useParams();
     const [product, setProduct] = useState({})
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${productId}`)
+        fetch(`https://enigmatic-ocean-25875.herokuapp.com/products/${productId}`)
             .then(res => res.json())
             .then(data => setProduct(data));
     }, [])

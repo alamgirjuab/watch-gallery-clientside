@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import { NavLink, BrowserRouter as Router, Switch, Route, Link, useParams, useRouteMatch } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link, useParams, useRouteMatch } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import AddProduct from '../../AddProduct/AddProduct';
 import MakeAdmin from '../../MakeAdmin/MakeAdmin';

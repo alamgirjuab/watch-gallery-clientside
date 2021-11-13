@@ -18,6 +18,7 @@ import MyOrders from './components/MyOrders/MyOrders';
 import Review from './components/Review/Review';
 import MakeAdmin from './components/MakeAdmin/MakeAdmin';
 import Booking from './components/Booking/Booking/Booking';
+import Contact from './components/Contact/Contact';
 
 function App() {
   return (
@@ -72,6 +73,9 @@ function App() {
             </Route>
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route path="/contact">
+              <Contact />
             </Route>
             <Route path="*">
               <NotFound />

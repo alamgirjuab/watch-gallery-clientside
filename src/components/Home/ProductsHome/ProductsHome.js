@@ -77,7 +77,7 @@ import './ProductsHome.css';
 const ProductsHome = () => {
     const [products, setProducts] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://enigmatic-ocean-25875.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [])

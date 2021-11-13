@@ -1,0 +1,14 @@
+.bottom-image{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    }
+    .image{
+        overflow: hidden;
+    }
+    .image img{
+        width: 100%;
+        transition: all 0.3s;
+    }
+    .image:hover img{
+        transform: scale(1.2);
+    }

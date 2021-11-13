@@ -16,19 +16,22 @@ const Dashboard = () => {
     const { logout, admin } = useAuth();
     return (
         <div className='row main-body'>
-            <div className='col-lg-3 col-sm-3 side-nav'>
-
+            {admin ? <div className='col-lg-3 col-sm-3 side-nav'>
                 <Link className='link' to={`${url}/addProducts`}>Add Products</Link>
                 <Link className='link' to={`${url}/manageProducts`}>Manage Products</Link>
                 <Link className='link' to={`${url}/manageOrders`}>Manage All Orders</Link>
                 <Link className='link' to={`${url}/makeAdmin`}>Make Admin</Link>
                 <Link className='link' to={`${url}/payment`}>Payments</Link>
-                {admin && <div>
-                    <Link className='link' to={`${url}/myOrders`}>My Orders</Link>
-                    <Link className='link' to={`${url}/review`}>Review</Link>
-                </div>}
+                <Link className='link' to={`${url}/myOrders`}>My Orders</Link>
+                <Link className='link' to={`${url}/review`}>Review</Link>
                 <Button className="me-3" onClick={logout} variant="light">Logout</Button>
-            </div>
+            </div> : <div className='col-lg-3 col-sm-3 side-nav'>
+                <Link className='link' to={`${url}/payment`}>Payments</Link>
+                <Link className='link' to={`${url}/myOrders`}>My Orders</Link>
+                <Link className='link' to={`${url}/review`}>Review</Link>
+                <Button className="me-3" onClick={logout} variant="light">Logout</Button>
+            </div>}
+
             <div className='col-lg-9 col-sm-9'>
                 <div className='dashboard-header'>
                     <h1>DASHBOARD</h1>

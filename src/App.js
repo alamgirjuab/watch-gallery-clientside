@@ -11,6 +11,13 @@ import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import Products from './components/Products/Products';
 import AddProduct from './components/AddProduct/AddProduct';
+import ManageProducts from './components/ManageProducts/ManageProducts';
+import ManageOrders from './components/ManageOrders/ManageOrders';
+import Payment from './components/Payment/Payment';
+import MyOrders from './components/MyOrders/MyOrders';
+import Review from './components/Review/Review';
+import MakeAdmin from './components/MakeAdmin/MakeAdmin';
+import Booking from './components/Booking/Booking/Booking';
 
 function App() {
   return (
@@ -21,17 +28,38 @@ function App() {
             <Route path="/home">
               <Home />
             </Route>
-            <PrivateRoute path="/about">
+            <Route path="/about">
               <About />
-            </PrivateRoute>
+            </Route>
             <Route path="/products">
               <Products />
             </Route>
-            <Route path="/addProducts">
+            <PrivateRoute path="/addProducts">
               <AddProduct />
-            </Route>
+            </PrivateRoute>
+            <PrivateRoute path="/manageProducts">
+              <ManageProducts />
+            </PrivateRoute>
+            <PrivateRoute path="/manageOrders">
+              <ManageOrders />
+            </PrivateRoute>
+            <PrivateRoute path="/payment">
+              <Payment />
+            </PrivateRoute>
+            <PrivateRoute path="/myOrders">
+              <MyOrders />
+            </PrivateRoute>
+            <PrivateRoute path="/review">
+              <Review />
+            </PrivateRoute>
+            <PrivateRoute path="/makeAdmin">
+              <MakeAdmin />
+            </PrivateRoute>
             <PrivateRoute path="/dashboard">
               <Dashboard />
+            </PrivateRoute>
+            <PrivateRoute path="/booking/:productId">
+              <Booking />
             </PrivateRoute>
             <Route path="/users">
               <Users />

@@ -5,3 +5,7 @@
     background-color: #efefef;
     border-right: 2px solid lightgreen;
 }
+.link{
+    color: black;
+    display: block;
+}

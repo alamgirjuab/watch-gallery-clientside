@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Container, Navbar } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
 import logo from '../../../img/LOGO.png';
 import useAuth from '../../../hooks/useAuth';
@@ -41,9 +41,9 @@ const Header = () => {
                             <NavLink className='link' to="/"></NavLink>
                         }*/}
                         {user?.email ?
-                            <div>
-                                <NavLink className='link' to="/addProducts">Add Products</NavLink>
+                            <div style={{ display: "flex", alignItems: "center" }}>
                                 <NavLink className='link' to="/dashboard">Dashboard</NavLink>
+                                {/* <Link className='btn btn-warning' onClick={logout}>Logout</Link> */}
                                 <Button className="me-3" onClick={logout} variant="light">Logout</Button>
                             </div>
                             :

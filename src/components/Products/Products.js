@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../Shared/Header/Header';
 
 const Products = () => {
@@ -21,7 +22,9 @@ const Products = () => {
                         <h2>{product.name}</h2>
                         <p>{product.description}</p>
                         <h5>Price: $ {product.price}</h5>
-                        <button className='btn btn-danger'>Order Now</button>
+                        <Link to={`/booking/${product._id}`}>
+                            <button className='btn btn-danger'>Order Now</button>
+                        </Link>
                     </div>)
                 }
             </div>

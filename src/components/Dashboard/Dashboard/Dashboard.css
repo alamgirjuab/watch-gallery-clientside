@@ -4,8 +4,19 @@
 .side-nav{
     background-color: #efefef;
     border-right: 2px solid lightgreen;
+    font-size: 20px;
+    padding-top: 100px;
 }
 .link{
     color: black;
     display: block;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: left;
+}
+.dashboard-header{
+    height: 100px;
+    border-bottom: 2px solid navy;
+    padding-top: 20px;
 }

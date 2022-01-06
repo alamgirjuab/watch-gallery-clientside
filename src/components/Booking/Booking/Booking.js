@@ -12,9 +12,6 @@ const Booking = () => {
     }, [])
     return (
         <div>
-            {/* <h2>Your purchase ID is: {productId}</h2>
-            <h2>Product Name: {product.name}</h2> */}
-
             <div className="container my-5">
                 <h2 className="text-primary mb-4">Order Your Products</h2>
                 <div className="shadow-lg p-3 mb-5 pb-5 bg-body rounded text-center">

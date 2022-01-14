@@ -83,20 +83,23 @@ const ProductsHome = () => {
     }, [])
     return (
         <div className='container my-5 product-display'>
-            {
-                products.map(product => <div
-                    key={product._id}
-                    className='single-product'>
-
-                    <img className='img-fluid' src={product.img} alt="" />
-                    <h2>{product.name}</h2>
-                    <p>{product.description}</p>
-                    <h5>Price :${product.price}</h5>
-                    <Link to={`/booking/${product._id}`}>
-                        <button className='btn btn-danger'>Order Now</button>
-                    </Link>
-                </div>).slice(0, 6)
-            }
+            <div className="row gx-4">
+                {
+                    products.map(product => <div
+                        key={product._id}
+                        className='col-md-4 mb-5  border'>
+                        <div className="m-2">
+                            <img className='img-fluid w-25' src={product.img} alt="" />
+                            <h2>{product.name}</h2>
+                            <p>{product.description}</p>
+                            <h5>Price :${product.price}</h5>
+                            <Link to={`/booking/${product._id}`}>
+                                <button className='btn btn-danger'>Order Now</button>
+                            </Link>
+                        </div>
+                    </div>).slice(0, 6)
+                }
+            </div>
         </div>
     );
 };

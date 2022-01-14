@@ -14,20 +14,22 @@ const Products = () => {
         <div>
             <Header />
             <div className='container product-display my-5'>
-                {
-                    products.map(product => <div
-                        key={product._id}
-                        className="single-product"
-                    >
-                        <img className='img-fluid' src={product.img} alt="" />
-                        <h2>{product.name}</h2>
-                        <p>{product.description}</p>
-                        <h5>Price: $ {product.price}</h5>
-                        <Link to={`/booking/${product._id}`}>
-                            <button className='btn btn-danger'>Order Now</button>
-                        </Link>
-                    </div>)
-                }
+                <div className="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-2">
+                    {
+                        products.map(product => <div
+                            key={product._id}
+                            className="single-product"
+                        >
+                            <img className='img-fluid' src={product.img} alt="" />
+                            <h2>{product.name}</h2>
+                            <p>{product.description}</p>
+                            <h5>Price: $ {product.price}</h5>
+                            <Link to={`/booking/${product._id}`}>
+                                <button className='btn btn-danger'>Order Now</button>
+                            </Link>
+                        </div>)
+                    }
+                </div>
             </div>
             <Footer />
         </div>
